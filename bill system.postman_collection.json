@@ -1,0 +1,213 @@
+{
+	"info": {
+		"_postman_id": "bafbafab-ff03-4d75-abf5-f3ba0503d975",
+		"name": "bill system",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25001376",
+		"_collection_link": "https://gold-meadow-718572.postman.co/workspace/aaa~4e36f17d-0992-4f7d-b784-7322c348c63f/collection/25001376-bafbafab-ff03-4d75-abf5-f3ba0503d975?action=share&source=collection_link&creator=25001376"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/createNewUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"aye\",\r\n    \"password\": \"aye\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/createNewUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"createNewUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"aye\",\r\n    \"password\": \"aye\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/add",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJheWUiLCJpc1VzZXIiOnRydWUsImV4cCI6MTY5NTIzMDM3OSwiaWF0IjoxNjk1MjEyMzc5fQ.hFHnvt_jZTXK3O9JgkZg18GRXaOov-_9Q6AbiNHXyqMZChQrwQ0vjmvky7B0t3RjSIRWSL0SsjCWotZW3lomkw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Top up MPT\",\r\n    \"description\": \"Top up MPT description\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/list",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJheWUiLCJpc1VzZXIiOnRydWUsImV4cCI6MTY5NTIzMDM3OSwiaWF0IjoxNjk1MjEyMzc5fQ.hFHnvt_jZTXK3O9JgkZg18GRXaOov-_9Q6AbiNHXyqMZChQrwQ0vjmvky7B0t3RjSIRWSL0SsjCWotZW3lomkw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/list?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"list"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/pay",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJheWUiLCJpc1VzZXIiOnRydWUsImV4cCI6MTY5NTIzMDM3OSwiaWF0IjoxNjk1MjEyMzc5fQ.hFHnvt_jZTXK3O9JgkZg18GRXaOov-_9Q6AbiNHXyqMZChQrwQ0vjmvky7B0t3RjSIRWSL0SsjCWotZW3lomkw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"api_caller\": \"Citizen Pay\",\r\n    \"bill_id\": 1,\r\n    \"amount\": 1000,\r\n    \"phone_number\": \"19595029399\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/pay",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pay"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/transaction",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJheWUiLCJpc1VzZXIiOnRydWUsImV4cCI6MTY5NTIzMDM3OSwiaWF0IjoxNjk1MjEyMzc5fQ.hFHnvt_jZTXK3O9JgkZg18GRXaOov-_9Q6AbiNHXyqMZChQrwQ0vjmvky7B0t3RjSIRWSL0SsjCWotZW3lomkw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/transaction?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transaction"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
